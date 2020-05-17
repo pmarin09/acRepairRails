@@ -1,0 +1,31 @@
+<section class = "forms text-center border border-light p-5">
+    <p class = "h4 mb-4"> <b> Reparaciones AC  </b></p>
+    
+    <%= form_with model: @appointment do |f| %>
+      <div class="form-row mb-4">
+        <div class="col">
+        Nombre:<%= f.text_field :first_name,required: true, class:"form-control" %>
+        </div>
+        <div class="col">
+        Apellido:<%= f.text_field :last_name,required: true, class:"form-control" %>
+        </div>
+        </div>
+      <div> Telefono: <%= f.telephone_field :phone_number,required: true, class:"form-control mb-4"  %> </div>
+      <div> Fecha: <%= f.date_field :appointment_date,required: true, class:"form-control mb-4"  %> </div>
+
+      <p><div class="form-row mb-4">
+        <div class="col">
+        <%= f.time_select :appointment_time, { prompt: {hour: 'Hora', minute: 'Min'}, minute_step: 30 }, { class: 'form-control' } %>
+        </div>
+        </div></p>
+
+      <p><div> Marca de Aire Acondicionado: <%= f.select :ac_brand, ["Panasonic","Samsung","Mabe", "LG","Electrolux","Danki","Midea"], required: true, class:"dropdown" %> </div></p>
+      Otra Marca:<%= f.text_field :ac_brand,required: true, class:"form-control" %>
+      <p><div> Cantidad de Aires Acondicionados: <%= f.number_field :ac_qty, required: true, class:"form-control mb-4" %> </div></p>
+      
+      <p><div><button class = "btn btn-primary btn-block" type="submit">Programar Cita</button></div></p>
+    <%end%>
+
+</section>
+
+
