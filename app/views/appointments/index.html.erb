@@ -1,3 +1,5 @@
+
+
 <section class = "forms text-center border border-light p-5">
     <p class = "h4 mb-4"> <b> Reparaciones AC  </b></p>
     
@@ -19,8 +21,10 @@
         </div>
         </div></p>
 
+
+      <p><div> Tipo de Servicio: <%= f.select :service_type, ["Mantenimiento","Reparación","Instalación"], required: true, class:"dropdown" %> </div></p>
       <p><div> Marca de Aire Acondicionado: <%= f.select :ac_brand, ["Panasonic","Samsung","Mabe", "LG","Electrolux","Danki","Midea"], required: true, class:"dropdown" %> </div></p>
-      Otra Marca:<%= f.text_field :ac_brand,required: true, class:"form-control" %>
+      Otra Marca:<%= f.text_field :ac_brand,required: false, class:"form-control" %>
       <p><div> Cantidad de Aires Acondicionados: <%= f.number_field :ac_qty, required: true, class:"form-control mb-4" %> </div></p>
       
       <p><div><button class = "btn btn-primary btn-block" type="submit">Programar Cita</button></div></p>

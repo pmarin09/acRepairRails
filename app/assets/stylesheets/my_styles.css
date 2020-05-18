@@ -60,6 +60,22 @@ height: 300px;
 	text-align: center;
   	text-align-last: center;
   }
+  #service_type{
+	display: block;
+	width: 75%;
+	height: 40px;
+	margin: auto;
+	border-radius: 10px;
+	text-align: center;
+  	text-align-last: center;
+  }
+  #ac_qty{
+	display: block;
+	width: 20%;
+	margin: auto;
+	text-align: center;
+  	text-align-last: center;
+  }
 
   .form-control{
 	text-align: center;
