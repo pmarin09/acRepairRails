@@ -29,7 +29,7 @@ class AppointmentsController < ApplicationController
   
     private
     def appointment_params
-      params.permit(:first_name, :last_name, :phone_number, :appointment_date, :appointment_time, :ac_brand,:ac_qty )
+      params.permit(:first_name, :last_name, :phone_number, :appointment_date, :appointment_time, :ac_brand,:ac_qty, :service_type )
     end
   
   end
